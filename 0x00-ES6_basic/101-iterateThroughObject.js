@@ -1,8 +1,11 @@
 export default function iterateThroughObject(reportWithIterator) {
   const employeeNames = [];
 
-  // Iterate through the reportWithIterator using the for...of loop
-  for (const employee of reportWithIterator()) {
+  // Invoke the reportWithIterator function to get the iterator
+  const iterator = reportWithIterator();
+
+  // Iterate through the iterator using the for...of loop
+  for (const employee of iterator) {
     employeeNames.push(employee);
   }
 
