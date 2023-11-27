@@ -5,8 +5,10 @@ export default function iterateThroughObject(reportWithIterator) {
   const iterator = reportWithIterator();
 
   // Iterate through the iterator using the for...of loop
-  for (const employee of iterator) {
-    employeeNames.push(employee);
+  for (const department of iterator) {
+    for (const employee of department) {
+      employeeNames.push(employee);
+    }
   }
 
   // Join the employee names with '|'
