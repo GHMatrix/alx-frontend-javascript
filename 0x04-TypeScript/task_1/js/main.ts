@@ -36,7 +36,11 @@ const director1: Directors = {
 console.log(director1);
 
 // Define the printTeacher function using the PrintTeacherFunction interface
-const printTeacher: PrintTeacherFunction = (firstName, lastName) => {
+interface PrintTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+const printTeacher: PrintTeacherFunction = (firstName: string, lastName: string): string => {
   const initials = `${firstName.charAt(0)}.`;
   return `${initials} ${lastName}`;
 };
@@ -46,7 +50,7 @@ const printedTeacher = printTeacher("John", "Doe");
 console.log(printedTeacher); // Output: J. Doe
 
 // Define the StudentClass class
-class StudentClass implements StudentClass {
+class StudentClass {
   private _firstName: string;
   private _lastName: string;
 
