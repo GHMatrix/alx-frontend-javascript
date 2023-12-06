@@ -73,3 +73,22 @@ function executeWork(employee: Director | Teacher): void {
 // Test the executeWork function
 executeWork(createEmployee(200));    // Output: Getting to work
 executeWork(createEmployee(1000));   // Output: Getting to director tasks
+
+// Define the Subjects string literal type
+type Subjects = 'Math' | 'History';
+
+// Define the teachClass function
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  } else if (todayClass === 'History') {
+    return 'Teaching History';
+  } else {
+    // Handle other cases or throw an error if needed
+    return 'Invalid subject';
+  }
+}
+
+// Test the teachClass function
+console.log(teachClass('Math'));      // Output: Teaching Math
+console.log(teachClass('History'));   // Output: Teaching History
