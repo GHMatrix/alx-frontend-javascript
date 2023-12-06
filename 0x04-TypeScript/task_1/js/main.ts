@@ -44,3 +44,27 @@ const printTeacher: PrintTeacherFunction = (firstName, lastName) => {
 // Example usage of printTeacher function
 const printedTeacher = printTeacher("John", "Doe");
 console.log(printedTeacher); // Output: J. Doe
+
+// Define the StudentClass class
+class StudentClass implements StudentClass {
+  private _firstName: string;
+  private _lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this._firstName = firstName;
+    this._lastName = lastName;
+  }
+
+  workOnHomework(): string {
+    return 'Currently working';
+  }
+
+  displayName(): string {
+    return this._firstName;
+  }
+}
+
+// Example usage of StudentClass
+const studentInstance: StudentClass = new StudentClass('Alice', 'Smith');
+console.log(studentInstance.workOnHomework()); // Output: Currently working
+console.log(studentInstance.displayName()); // Output: Alice
