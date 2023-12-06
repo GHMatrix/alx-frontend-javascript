@@ -34,3 +34,13 @@ const director1: Directors = {
 };
 
 console.log(director1);
+
+// Define the printTeacher function using the PrintTeacherFunction interface
+const printTeacher: PrintTeacherFunction = (firstName, lastName) => {
+  const initials = `${firstName.charAt(0)}.`;
+  return `${initials} ${lastName}`;
+};
+
+// Example usage of printTeacher function
+const printedTeacher = printTeacher("John", "Doe");
+console.log(printedTeacher); // Output: J. Doe
